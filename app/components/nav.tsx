@@ -3,9 +3,8 @@
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs'
 import React from 'react'
 
-type Props = {}
 
-const Nav = (props: Props) => {
+const Nav = () => {
   return (
       <nav className='flex justify-between p-4 items-center '>
             <div>

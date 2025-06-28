@@ -22,7 +22,7 @@ const Subdomain  = async ({params}: {params:Promise<paramsInterface>}) => {
   return (
  (
       <div className='flex p-10 flex-col gap-4'>{blogs.map(blog=>
-      <div className='flex flex-col gap-2 '>
+      <div className='flex flex-col gap-2 ' key={blog.id}>
         <h3 className='font-bold text-2xl'>{blog.title}</h3>
         <p className='pl-4'>{blog.body}</p>
       </div>

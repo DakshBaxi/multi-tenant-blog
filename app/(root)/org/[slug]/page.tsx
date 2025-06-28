@@ -7,9 +7,9 @@ import { createBlog } from '@/lib/action'
 import { useOrganization } from '@clerk/nextjs'
 import React, { useState } from 'react'
 
-type Props = {}
 
-const OrganizationPage = (props: Props) => {
+
+const OrganizationPage = () => {
     const [blogContent,setBlogContent]=useState('');
     const selectedOrganization = useOrganization();
     

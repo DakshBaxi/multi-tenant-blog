@@ -1,5 +1,19 @@
 
 services:
+  multi-tennat-app:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+      args:
+        - DB_URL=postgresql://postgres:password@db:5432/postg
+        - NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZW5hYmxpbmctZ29yaWxsYS0zNy5jbGVyay5hY2NvdW50cy5kZXYk
+    ports:
+     - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/postg
+      - CLERK_SECRET_KEY=sk_test_1JtNu8XX4mDIT6qkZV3OsyKYeFnY340rl2sILMbTSf
+    depends_on:
+      - db
   db:
     image: postgres
     environment:
